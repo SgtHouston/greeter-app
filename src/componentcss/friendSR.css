@@ -1,0 +1,26 @@
+.friendSR {
+    justify-content: center;
+    display: flex;
+    
+}
+
+
+.card {
+    background-image: linear-gradient(#5E0174, #6E1155);
+    margin-bottom: 2vh;
+    border-radius: 10px;
+    color: yellow;
+    min-width: 25vw;
+    justify-items: center;
+    
+}
+
+.cardinfo {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+
+    
+}
+

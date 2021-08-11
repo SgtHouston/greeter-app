@@ -1,9 +1,8 @@
 // Name Field
 
-// Create and use a component that takes a firstName and a lastName prop and displays the first initial and last name on the page.
-
+// Create and use a component that takes a firstName and a lastName prop and 
+// displays the first initial and last name on the page.
 // Example, This component should display 'S. Rogers' on the page.
-
 // <Name firstName="Steve" lastName="Rogers" />
 
 import React from 'react'

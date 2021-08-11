@@ -15,6 +15,7 @@ class Translator extends React.Component {
 
     handleTextChange = (event) => {
         this.setState({
+            // set form to the text value from the form input field
             text: event.target.value,
             translated: rot13(event.target.value)
         })
@@ -25,6 +26,7 @@ class Translator extends React.Component {
         <div>
             {this.state.translated}<br/>
             <input type="text" 
+            // handle changes in the form with onChange vice onClick
             onChange={this.handleTextChange} 
             value={this.state.text}/>
         </div>)

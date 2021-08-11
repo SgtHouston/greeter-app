@@ -19,7 +19,10 @@ import Fireworks from './components/fireworks';
 import SuperCounter from './components/superCounter';
 import StatusPicker from './components/statuspicker';
 import LanguagePicker from './components/languagepicker';
-
+import Translator2 from './components/Translator2';
+import ProfileForm from './components/ProfileForm'
+import NameInput from './components/NameInput';
+import JokeApp from './components/JokeApp';
 
 function App() {
   return (
@@ -39,7 +42,6 @@ function App() {
       {/* <Greeter />
       <Greeter /> */}
 
-
       {/* You can loop over a list using the map function.  
       Second variable allows you to save the index of each 
       variable to use it as a key prop, */}
@@ -48,7 +50,6 @@ function App() {
       })}
       {/* Click up and click down */}
       {/* <Counter />
-
 
       <TimeStamp />
       <TimestampClock /> */}
@@ -72,7 +73,6 @@ function App() {
         return <Friend friendName= {address.first + ' ' + address.last}/>
       })}
 
-
       {/* Use .map on the following array to display movie details card that 
       includes a title, year, and a <StarRating /> component for each. */}
       {friendsSR.map((friendSR, id) => {
@@ -91,33 +91,29 @@ function App() {
             </div>
           </div>
         )
-      })}
-
+      })}   
+      {/* Toggle a button state on click */}
       <Fireworks />
 
+      {/* Mapping over data that needs formatting  */}
       { staffMembers.map((member, index) => {
-        
         return (
           <Profile name={member.name.first + ' ' + member.name.last} title={member.title} id={index} />
-          
         )
       })}
 
-      <SuperCounter />
+      {/* Changing state */}
       <StatusPicker />
+      <br/>
       <LanguagePicker />
-
-
-
-
-
-
-
-
-
-
-
-
+      <br/>
+      <SuperCounter />  
+      <br/>                                                       
+      <Translator2 />
+      <br/>
+      <ProfileForm />
+      <NameInput />
+      <JokeApp />
     </div>
   );
 }

@@ -8,10 +8,12 @@
 // Make each button increase or decrease the number according to its face value
 
 
+// Alternative button click alternative below !!!!!!!!!!!!!!
+
 import React from 'react'
 
 class SuperCounter extends React.Component {
-    constructor () {
+    constructor() {
         super()
         this.state = {
             count: 0
@@ -19,28 +21,28 @@ class SuperCounter extends React.Component {
     }
 
     handleClickUp = () => {
-        this.setState ({
+        this.setState({
             // setting this' attributes
             count: this.state.count + 1
         });
     }
 
     handleClickUp10 = () => {
-        this.setState ({
+        this.setState({
             // setting this' attributes
             count: this.state.count + 10
         });
     }
 
     handleClickDown = () => {
-        this.setState ({
+        this.setState({
             // setting this' attributes
             count: this.state.count - 1
         });
     }
 
     handleClickDown10 = () => {
-        this.setState ({
+        this.setState({
             // setting this' attributes
             count: this.state.count - 10
         });
@@ -64,8 +66,42 @@ class SuperCounter extends React.Component {
 
 }
 
-
-
-
-
 export default SuperCounter
+
+
+// class Counter extends React.Component {
+// constructor() {
+//     super();
+//     this.state = {
+//         count: 42
+//     };
+// }
+
+// updateCount = (count) => {
+//     this.setState({
+//         count: this.state.count + count
+//     });
+// };
+
+// render() {
+//     return (
+//         <div className="Counter">
+//             <button>-1</button>
+//             <button onClick={() => { this.updateCount(-10); }} >
+//                 -10
+//             </button>
+//             <span>{this.state.count}</span>
+//             <button
+//                 onClick={() => {
+//                     this.updateCount(10);
+//                 }}
+//             >
+//                 +10
+//             </button>
+//             <button>+1</button>
+//         </div>
+//     );
+// }
+// }
+
+// export default Counter;

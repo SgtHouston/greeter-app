@@ -14,45 +14,73 @@ class LanguagePicker extends React.Component {
     constructor() {
         super()
         this.state = {
-            flag: '🇺🇸'
+            flag: '🇺🇸',
+            menuVis: false
         }
     }
 
-    changeFlag = () => {
-        
-    }
-
-    changeLanguageFlagJapan = () => {
+    showMenu = ( ) => {
         this.setState({
-            flag: '🇯🇵'
+            menuVis: (!this.state.menuVis)
         })
     }
 
-    changeLanguageFlagGermany = () => {
+    updateFlag = (newFlag) => {
         this.setState({
-            flag: '🇩🇪'
+            flag: newFlag,
+            menuVis: (!this.state.menuVis)
         })
     }
 
+    // changeLanguageFlagJapan = () => {
+    //     this.setState({
+    //         flag: '🇯🇵',
+    //         menuVis: (!this.state.menuVis)
+    //     })
+    // }
 
-    changeLanguageFlagChina = () => {
-        this.setState({
-            flag: '🇨🇳'
-        })
-    }
+    // changeLanguageFlagGermany = () => {
+    //     this.setState({
+    //         flag: '🇩🇪',
+    //         menuVis: (!this.state.menuVis)
+    //     })
+    // }
 
 
-    changeLanguageFlagEspana = () => {
-        this.setState({
-            flag: '🇪🇸'
-        })
-    }
+    // changeLanguageFlagChina = () => {
+    //     this.setState({
+    //         flag: '🇨🇳',
+    //         menuVis: (!this.state.menuVis)
+    //     })
+    // }
 
-    // Need dropdown menu???
+
+    // changeLanguageFlagEspana = () => {
+    //     this.setState({
+    //         flag: '🇪🇸',
+    //         menuVis: (!this.state.menuVis)
+    //     })
+    // }
+
+    // changeLanguageFlagUSA = () => {
+    //     this.setState({
+    //         flag: '🇺🇸',
+    //         menuVis: (!this.state.menuVis)
+    //     })
+    // }
+
+    
     render() {
         return (
             <div>
-                <button onClick={this.changeFlag} className="display-none">{this.state.flag}</button>
+                <button onClick={this.showMenu} >{this.state.flag}</button>
+                <div style={{display: this.state.menuVis ? 'block' : 'none' }}>
+                    <button onClick={() => { this.updateFlag('🇯🇵')}} >🇯🇵</button>
+                    <button onClick={() => { this.updateFlag('🇩🇪')}} >🇩🇪</button>
+                    <button onClick={() => { this.updateFlag('🇨🇳')}} >🇨🇳</button>
+                    <button onClick={() => { this.updateFlag('🇪🇸')}} >🇪🇸</button>
+                    <button onClick={() => { this.updateFlag('🇺🇸')}} >🇺🇸</button>
+                </div>
             </div>
         )
     }

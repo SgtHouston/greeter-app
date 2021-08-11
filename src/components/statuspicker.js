@@ -19,33 +19,40 @@ class StatusPicker extends React.Component {
 
     }
 
-    setActive = () =>{
-        this.setState ({
-            // setting this' attributes
-            status: 'Active'
+    updateStatus = (newStatus) => {
+        
+        this.setState({
+            status: newStatus
         });
-    }
+    };
 
-    setAway = () => {
-        this.setState ({
-            // setting this' attributes
-            status: 'Away'
-        });
-    }
+    // setActive = () =>{
+    //     this.setState ({
+    //         // setting this' attributes
+    //         status: 'Active'
+    //     });
+    // }
 
-    setOffline = () => {
-        this.setState ({
-            // setting this' attributes
-            status: 'Offline'
-        });
-    }
+    // setAway = () => {
+    //     this.setState ({
+    //         // setting this' attributes
+    //         status: 'Away'
+    //     });
+    // }
+
+    // setOffline = () => {
+    //     this.setState ({
+    //         // setting this' attributes
+    //         status: 'Offline'
+    //     });
+    // }
     render() {
         return(
             <div>
                 <h2>{this.state.status}</h2> 
-                <button onClick={this.setActive}>Active</button>
-                <button onClick={this.setAway}>Away</button>
-                <button onClick={this.setOffline}>Offline</button>
+                <button onClick={() => { this.updateStatus('Active');   }}>Active</button>
+                <button onClick={() => { this.updateStatus('Away');     }}>Away</button>
+                <button onClick={() => { this.updateStatus('Offline');  }}>Offline</button>
             </div>
         )
     }

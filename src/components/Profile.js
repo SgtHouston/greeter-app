@@ -9,6 +9,7 @@ import React from 'react'
 import '../componentcss/profile.css'
 
 class Profile extends React.Component{
+    
     render(name, title) {
         name = this.props.name
         const names = name.split(" ")
@@ -25,20 +26,10 @@ class Profile extends React.Component{
                     <div className="fullname">{fname} {lname}</div>
                     <div className="title">{title}</div> 
                 </div>                                                                           
-                
             </div>
         )
-
     }
 }
-
-
-
-
-
-
-
-
 
 // Step 3 - Export the component for use in app.js
 export default Profile
